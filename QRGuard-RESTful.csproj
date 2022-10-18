@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="ThoughtWorks.QRCode.Standard" Version="1.0.1.6" />
   </ItemGroup>
 
 </Project>
