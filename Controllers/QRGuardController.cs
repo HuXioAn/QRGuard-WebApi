@@ -9,13 +9,6 @@ public class QRGuardController : ControllerBase
 {
 
 
-    private readonly ILogger<WeatherForecastController> _logger;
-
-    public QRGuardController(ILogger<WeatherForecastController> logger)
-    {
-        _logger = logger;
-    }
-
     [HttpGet("{id}")]
     public QRGuard Get(string id)
     {
