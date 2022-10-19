@@ -20,4 +20,18 @@ public class QRGuardController : ControllerBase
             qrCodePath = guard.GuardGen(id)
         };
     }
+
+    [HttpGet("{id}/code")]
+    public IActionResult GetCode(string id)
+    {
+        var guard = new Guard();
+        string? codePath = guard.GuardGen(id);
+        Console.WriteLine(codePath);
+
+        Byte[] code = System.IO.File.ReadAllBytes(codePath);
+
+        return File(code,"image/jpeg");
+    }
+
+
 }
