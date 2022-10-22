@@ -26,7 +26,7 @@ public class QRGuardController : ControllerBase
     {
         var guard = new Guard();
         string? codePath = guard.GuardGen(id);
-        Console.WriteLine(codePath);
+        //Console.WriteLine(codePath);
 
         Byte[] code = System.IO.File.ReadAllBytes(codePath);
 
